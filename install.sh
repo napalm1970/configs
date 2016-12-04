@@ -9,13 +9,14 @@ bash_conf_file=(.bash_aliases
 
 # myscripts 
 
-CONFIGDIR=./config
+CONFIGDIR=$HOME/projects/bash/test
+
 
 
 # [ -e $CONFIGDIR ] || git clone https://github.com/napalm1970/configs config
 
 for file in ${bash_conf_file[*]}
 do
-    printf "    %s\n" $file
+    ln -s `pwd`/$file $CONFIGDIR 
 done
 
