@@ -4,11 +4,10 @@
 
 export TERM=xterm-256color
 export GOROOT=/usr/lib/go
-export GOPATH=/home/napalm/go
-export PATH=$PATH:$GOPATH/bin
+export PAGER=most
+export EDITOR='vim'
 
-GIT_EDITOR='emacsclient'
-EDITOR='emacsclient'
+GIT_EDITOR='vim'
 
 # If not running interactively, don't do anything
 case $- in
@@ -16,7 +15,7 @@ case $- in
       *) return;;
 esac
 
-# don't put duplicate lines or lines starting with space in the history.
+# don't put duplicate line─s or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
 
@@ -65,20 +64,21 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1="\[\033[01;36m\][\w]\[\033[00m\]\n\[\033[01;32m\]\u@\h\[\033[00m\] --> " 
+    # PS1="\[\033[01;36m\][\w]\[\033[00m\]\n\[\033[01;32m\]\u@\h\[\033[00m\] --> " 
+    PS1="\[\033[01;36m\][\w]\[\033[00m\]\n\[\033[01;32m\]╭─\u@\h\[\033[00m\]\n╰─->>> " 
 
-    # PS1='bian_
+    # ps1='bian_
     # chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \n-> '
     
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    ps1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
 unset color_prompt force_color_prompt
 
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in
+# if this is an xterm set the title to user@host:dir
+case "$term" in
 xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    ps1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$ps1"
     ;;
 *)
     ;;
@@ -96,12 +96,12 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-# colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+# colored gcc warnings and errors
+#export gcc_colors='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-# alias ll='ls -alF'
-# alias la='ls -A'
+# alias ll='ls -alf'
+# alias la='ls -a'
 # alias l='ls -CF'
 
 # Add an "alert" alias for long running commands.  Use like so:
@@ -127,6 +127,5 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
 
 
