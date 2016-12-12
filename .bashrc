@@ -3,7 +3,6 @@
 # for examples
 
 export TERM=xterm-256color
-export GOROOT=/usr/lib/go
 export PAGER=most
 export EDITOR='vim'
 
@@ -95,14 +94,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
-
-# colored gcc warnings and errors
-#export gcc_colors='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
-# some more ls aliases
-# alias ll='ls -alf'
-# alias la='ls -a'
-# alias l='ls -CF'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert

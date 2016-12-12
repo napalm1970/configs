@@ -21,3 +21,7 @@ alias apts="sudo apt-cache search $1"
 alias aptr="sudo apt-get remove $1"
 alias aptu="sudo apt-get update"
 alias stlkr="cd ~/.wine/drive_c/Program\ Files\ (x86)/S.T.A.L.K.E.R. - ОП-2/bin/"
+
+alias gs="git status"
+alias ga="git add $*"
+alias gc="git commit -m "$*""
