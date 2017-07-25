@@ -5,6 +5,9 @@
 export TERM=xterm-256color
 export PAGER=most
 export EDITOR='vim'
+export ALTERNATE_EDITOR=""
+export VISUAL='vim'
+export GOROOT=/home/napalm/go 
 
 GIT_EDITOR='vim'
 
@@ -120,3 +123,4 @@ if ! shopt -oq posix; then
 fi
 
 
+export GTAGSLABEL=pygments
