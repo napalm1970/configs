@@ -1,11 +1,12 @@
 #! /bin/bash
 
 
-bash_conf_file=(.bash_aliases
-                .bash_history
+bash_conf_file=(
+                .bash_aliases
                 .bashrc
                 .xinitrc
-                .Xresources)
+                .Xresources
+)
 
 # myscripts 
 
@@ -16,6 +17,12 @@ CONFIGDIR=$HOME/config
 
 for file in ${bash_conf_file[*]}
 do
-    ln -s `pwd`/$file $HOME
+    if [ -e $file ]; then
+	rm -rf $file
+    fi
+
+    echo $CONFIGDIR/$file
+    
+     ln -s $CONFIGDIR/$file $HOME
 done
 
