@@ -10,15 +10,15 @@ bash_conf_file=(
 
 # myscripts 
 
-CONFIGDIR=$HOME/config
+CONFIGDIR=$HOME/configs
 
 
-[ -e $CONFIGDIR ] || git clone https://github.com/napalm1970/configs config
+[ -e $CONFIGDIR ] || git clone https://github.com/napalm1970/configs $HOME/configs
 
 for file in ${bash_conf_file[*]}
 do
-    if [ -e $file ]; then
-	rm -rf $file
+    if [ -e $HOME/$file ]; then
+	rm -rf $HOME/$file
     fi
 
     echo $CONFIGDIR/$file
