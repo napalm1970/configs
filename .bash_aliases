@@ -4,7 +4,7 @@ alias ll='ls -l --color=always --classify'
 alias shutdown='/usr/bin/systemctl poweroff'
 alias findname='sudo find / -name $1'
 # alias emacs='emacsclient -ca ""'
-alias update='yaourt -Syu'
+alias update='aurman -Syu'
 alias game='cd ~/.wine/drive_c/Program\ Files/ && mc'
 alias pyt='cd ~/projects/python'
 alias doc='cd /usr/share/doc && mc'
@@ -24,3 +24,4 @@ alias gpl="git pull"
 alias mount.mdx="sudo mount -o loop,offset=64"
 alias cl="clear"
 alias packettracer="packettracer &"
+alias packman="aurman"

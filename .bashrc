@@ -4,12 +4,18 @@
 
 export TERM=xterm-256color
 export PAGER=most
-export EDITOR='vim'
+export EDITOR='emacs'
 export ALTERNATE_EDITOR=""
-export VISUAL='vim'
-export GOROOT=/home/napalm/go
+export VISUAL='emacs'
 
-GIT_EDITOR='vim'
+export GOPATH=$HOME/go
+export GOROOT=/usr/local/go
+# export GOROOT=/usr/lib/go
+export PATH=$PATH:$GOROOT/bin
+export PATH=$PATH:$GOPATH/bin
+
+
+GIT_EDITOR='emacs'
 
 # If not running interactively, don't do anything
 case $- in
