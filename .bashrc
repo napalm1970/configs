@@ -4,9 +4,9 @@
 
 export TERM=xterm-256color
 export PAGER=most
-export EDITOR='emacs'
+export EDITOR='nvim'
 export ALTERNATE_EDITOR=""
-export VISUAL='emacs'
+export VISUAL='nvim'
 
 export GOPATH=$HOME/go
 export GOROOT=/usr/local/go
@@ -15,7 +15,7 @@ export PATH=$PATH:$GOROOT/bin
 export PATH=$PATH:$GOPATH/bin
 
 
-GIT_EDITOR='emacs'
+GIT_EDITOR='nvim'
 
 # If not running interactively, don't do anything
 case $- in

@@ -12,9 +12,6 @@ alias reboot='/usr/bin/systemctl reboot'
 alias wf='sudo wifi-menu'
 alias fbreader='/usr/bin/FBReader'
 
-alias emacsw="emacsclient  -nw $1"
-alias semac="sudo emacs -nw"
-alias emacsc="emacsclient -t"           # new - opens the GUI with alternate non-daemon
 
 alias gs="git status"
 alias ga="git add $*"
@@ -25,3 +22,4 @@ alias mount.mdx="sudo mount -o loop,offset=64"
 alias cl="clear"
 alias packettracer="packettracer &"
 alias packman="aurman"
+alias gb="go build"
