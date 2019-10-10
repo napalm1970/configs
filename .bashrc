@@ -4,18 +4,12 @@
 
 export TERM=xterm-256color
 export PAGER=most
-export EDITOR='nvim'
+export EDITOR='vim'
 export ALTERNATE_EDITOR=""
-export VISUAL='nvim'
-
-export GOPATH=$HOME/go
-export GOROOT=/usr/local/go
-# export GOROOT=/usr/lib/go
-export PATH=$PATH:$GOROOT/bin
-export PATH=$PATH:$GOPATH/bin
+export VISUAL='vim'
 
 
-GIT_EDITOR='nvim'
+GIT_EDITOR='vim'
 
 # If not running interactively, don't do anything
 case $- in
