@@ -6,6 +6,7 @@ bash_conf_file=(
                 .bashrc
                 .xinitrc
                 .Xresources
+
 )
 
 # myscripts 
@@ -25,4 +26,6 @@ do
     
      ln -s $CONFIGDIR/$file $HOME
 done
+ 
 
+ ln -s $CONFIGDIR/spacemacs/.spacemacs $HOME
