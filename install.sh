@@ -6,7 +6,7 @@ bash_conf_file=(
                 .bashrc
                 .xinitrc
                 .Xresources
-
+		.bash_profile
 )
 
 # myscripts 
